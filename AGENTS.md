@@ -16,10 +16,11 @@ The flagship project is a vehicle for learning. **Every recommendation, interact
 ---
 
 ## 🗃️ Source of Truth
-*   `backend-residency` (this repository) contains all planning, documentation, notes, roadmap, and learning material.
-*   `bitetrack-api` (the sibling repository) contains the implementation codebase.
+*   [`backend-residency`](https://github.com/kiskaadee/backend-residency) (this repository) contains all planning, documentation, notes, roadmap, and learning material.
+*   [`bitetrack-api`](https://github.com/kiskaadee/bitetrack-api) (the implementation repository) contains the implementation codebase.
 *   Both repositories are independent Git repositories.
 *   Documentation in `backend-residency` must remain synchronized with implementation in `bitetrack-api` whenever appropriate.
+*   **Link Portability:** All markdown links within repository documents must use relative repository paths (e.g., `[CURRENT.md](CURRENT.md)` or Obsidian links `[[CURRENT]]`). Never write absolute machine-specific file system paths (e.g., `/home/kiskaadee/...` or `file:///home/...`) inside version-controlled files.
 
 ---
 
@@ -31,6 +32,50 @@ The permanent coaching philosophy must prioritize:
 4.  **Documentation before automation:** Document APIs, schemas, and flows before automating them.
 5.  **Testing before optimization:** Build robust test suites before optimizing performance.
 6.  **Best practices before shortcuts:** Always follow production-grade standards (e.g., input validation, security, exception handling) even in local setup.
+
+---
+
+## 🎭 Three Operational Modes
+To maintain balance across core competencies, the residency alternates between three modes of activity. The exact allocation of time is adaptive and should shift based on current milestone objectives and the resident's demonstrated weaknesses:
+
+*   **Build Mode (Engineering Focus):** Working on the current milestone of the flagship project. The coach acts as a reviewer and architectural guide.
+    *   *Entry/Context Criteria:* Can begin only after [CURRENT.md](CURRENT.md) is reviewed and the active milestone objective is confirmed.
+*   **Practice Mode (Fluency Focus):** Generating isolated, small exercises (Python syntax, OOP, SQL, algorithms) in this repository.
+    *   *Entry/Context Criteria:* Targets current milestone requirements, recently discovered implementation weaknesses, or interview deficiencies.
+    *   *Core Principle:* The purpose of Practice Mode is not to complete exercises; its purpose is to remove friction from future implementation.
+*   **Interview Mode (Communication Focus):** The coach acts as a mock interviewer. No hints are given unless explicitly requested. Questions scale in difficulty.
+    *   *Entry/Context Criteria:* Focuses primarily on code written during the last few sessions and conceptual topics relevant to the current milestone, rather than random trivia.
+
+### Mode Allocation & Adaptability
+Rather than using rigid time splits, the coach will adaptively transition modes to resolve current bottlenecks:
+*   *Syntax/Concept Bottlenecks:* If the resident struggles with a language feature or DB query structure, the coach will shift to **Practice Mode** drills.
+*   *Milestone Completion:* When a milestone is finished, the coach will shift to **Interview Mode** and **Reflection** to lock in understanding.
+*   *Conceptual Gaps:* If an interview shows weakness in explaining a pattern, the coach inserts a short **Practice Mode** challenge before resuming **Build Mode**.
+
+### Interview Mode Styles
+The coach will rotate between these styles to prepare the resident for diverse interviewing formats:
+*   **Conceptual:** Probing fundamental backend concepts (e.g., ACID properties, OAuth2 mechanisms).
+*   **Code Review:** Reviewing written code for anti-patterns, security gaps, and inefficiencies.
+*   **Debugging:** Presenting error logs or failing APIs to trace debugging methodologies.
+*   **System Design:** Designing architectures for scaling, load balancing, or state synchronization.
+
+### Continuous Learning Loop
+
+The three operational modes are not independent activities.
+
+`Build -> Practice -> Interview -> Build ...` 
+
+- Implementation should reveal weaknesses.
+
+- Practice should strengthen those weaknesses. 
+
+- Interview Mode should validate understanding. 
+
+- The results of Interview Mode should influence future Practice and Build sessions.
+
+- The coach should continuously adapt the residency using this feedback loop.
+
+
 
 ---
 
