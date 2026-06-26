@@ -1,7 +1,7 @@
 # Flagship Project Architecture
 
-## Name: Inventory Management API
-A production-ready backend system for tracking product inventory, handling categories, recording orders, and tracking stock movements with robust logs.
+## Name: BiteTrack Backend v2
+A production-grade reboot of the BiteTrack system focusing on inventory, order management, and core transactional processes using FastAPI.
 
 ## Core Architectural Layout
 The system follows a layered architecture to decouple routing, validation, business rules, and database access.

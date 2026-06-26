@@ -1,6 +1,6 @@
-# Inventory Management API
+# BiteTrack Backend v2
 
-A production-ready, high-performance REST API built with FastAPI and PostgreSQL for inventory tracking and transactional order management.
+A production-ready, high-performance REST API built with FastAPI and PostgreSQL, serving as the modernized, rebooted backend for the BiteTrack inventory and order system.
 
 ## Features
 - **User Authentication & RBAC:** Secure user registration, password hashing (bcrypt), token-based login (OAuth2 + JWT), refresh token rotation via HttpOnly cookies, and strict Role-Based Access Control (Admin, Staff, Customer).

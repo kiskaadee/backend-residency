@@ -3,7 +3,7 @@
 ## Rules
 - [ ] One backend framework only (FastAPI).
 - [ ] One programming language only (Python).
-- [ ] One portfolio project only (Inventory Management API).
+- [ ] One portfolio project only (BiteTrack Backend v2).
 - [ ] Every concept learned must appear in the project.
 - [ ] No starting new technologies unless required by the roadmap.
 - [ ] AI is a mentor, reviewer, and debugger—not the primary implementation tool.

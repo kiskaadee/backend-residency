@@ -4,8 +4,9 @@ This document outlines the milestones and gates of the Backend Residency. Instea
 
 ---
 
-## 🏁 Flagship Project: Inventory Management API
-A production-ready backend for inventory and order management.
+## 🏁 Flagship Project: BiteTrack Backend v2
+Rebuild the original BiteTrack backend using modern Python technologies and production-grade engineering practices.
+- **Mission:** Rebuild BiteTrack from the ground up focusing on professional backend engineering. The goal is not feature parity with legacy version, but demonstrating clean code, tests, and API standards.
 - **Key Modules:** Auth & RBAC, Products & Categories, Orders & Transaction safety, Search & Filtering, and logging.
 - **Reference Docs:** [[project/README]], [[project/architecture]], [[project/api-design]], [[project/database]].
 
