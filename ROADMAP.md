@@ -20,7 +20,7 @@ Rebuild the original BiteTrack backend using modern Python technologies and prod
 - **Tasks:**
   - Configure workspace structure & symlink (`~/todo.md`)
   - Initialize Python environment using `uv`
-  - Configure Ruff, mypy, and code formatter
+  - Configure Ruff, Pyright, and code formatter
   - Setup multi-container Docker Compose file (`FastAPI` & `PostgreSQL`)
 - **Acceptance Tests:**
   - [ ] Running `docker compose up` starts both FastAPI and PostgreSQL database.

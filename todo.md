@@ -17,10 +17,10 @@
 ### Tasks
 - [x] Configure workspace directories (`docs/`, `journal/`, `project/`)
 - [x] Link main `todo.md` file to `~/todo.md`
-- [ ] Initialize Python environment using `uv`
-- [ ] Set up Ruff for linting and formatting
-- [ ] Set up mypy for type checking
-- [ ] Write `docker-compose.yml` defining a PostgreSQL service
+- [x] Initialize Python environment using `uv`
+- [x] Set up Ruff for linting and formatting
+- [x] Set up Pyright for type checking
+- [x] Write `docker-compose.yml` defining a PostgreSQL service
 
 ### Acceptance Tests
 - [ ] Docker compose services launch successfully.
