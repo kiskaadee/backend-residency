@@ -1,4 +1,4 @@
-# Flagship API Design
+# BiteTrack API Design
 
 ## Endpoints Specification
 
