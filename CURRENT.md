@@ -1,10 +1,10 @@
 # Current Focus
 
 ## Current Objective
-Initialize the Development Environment and establish version 1.0 of the Backend Residency Vault.
+Implement Secure User Registration & CRUD (Milestone 1).
 
 ## Current Blocker
 None.
 
 ## Next Action
-Initialize Python environment using `uv`, set up formatting/linting tools, and Docker Compose for PostgreSQL.
+Read FastAPI official documentation on routing/Pydantic models, and design the request/response payloads for `POST /auth/register`.

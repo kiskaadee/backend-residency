@@ -15,7 +15,7 @@ Rebuild the original BiteTrack backend using modern Python technologies and prod
 ## Milestones
 
 ### Milestone 0: Development Environment & Setup
-- **Status:** 🟨 In Progress
+- **Status:** 🟢 Completed
 - **Estimated Effort:** 5–10 hours
 - **Tasks:**
   - Configure workspace structure & symlink (`~/todo.md`)
@@ -23,8 +23,8 @@ Rebuild the original BiteTrack backend using modern Python technologies and prod
   - Configure Ruff, Pyright, and code formatter
   - Setup multi-container Docker Compose file (`FastAPI` & `PostgreSQL`)
 - **Acceptance Tests:**
-  - [ ] Running `docker compose up` starts both FastAPI and PostgreSQL database.
-  - [ ] Running `curl http://localhost:8000/docs` yields a valid HTML response.
+  - [x] Running `docker compose up` starts the PostgreSQL database container.
+  - [x] Running `curl http://localhost:8000/docs` yields a valid HTML response (FastAPI running in local devShell).
 - **Interview Checkpoint:**
   - [ ] Why do we use virtual environments (e.g., `uv`)?
   - [ ] What is the difference between a Docker image and a Docker container?

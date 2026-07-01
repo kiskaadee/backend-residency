@@ -11,7 +11,7 @@
 ---
 
 ## Milestone 0: Development Environment & Setup
-- **Status:** 🟨 In Progress
+- **Status:** 🟢 Completed
 - **Estimated Effort:** 5-10 hours
 
 ### Tasks
@@ -23,8 +23,8 @@
 - [x] Write `docker-compose.yml` defining a PostgreSQL service
 
 ### Acceptance Tests
-- [ ] Docker compose services launch successfully.
-- [ ] FastAPI endpoint returns status `200` at `/docs`.
+- [x] Docker compose services launch successfully.
+- [x] FastAPI endpoint returns status `200` at `/docs`.
 
 ### Interview Checkpoint
 - [ ] Explain virtual environments.
