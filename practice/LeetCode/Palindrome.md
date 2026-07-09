@@ -38,8 +38,6 @@ We initialize two pointers: `i` at the first index (0) and `j` at the last index
     
 We repeat this until the pointers meet or cross, specifically when `i >= j`. If the loop completes without finding any mismatched pairs, all mirrored digits are equivalent, confirming the sequence is a palindrome.
 
-![[palindrome-initial.png]]
-
 Initially, I sketched a flow so that the value comparisons occurs before verifying whether the pointers have not passed the half of the sequence, resulting in redundant computations.
 
 ```mermaid
