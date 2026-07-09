@@ -1,3 +1,4 @@
+.envrc
 .agents/
 .obsidian/workspace.json
-.obsidian/
+.venv/

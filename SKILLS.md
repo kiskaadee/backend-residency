@@ -4,13 +4,13 @@ Use this matrix to track your confidence and interview readiness for key backend
 
 | Skill | Confidence | Interview Ready | Linked Notes |
 | :--- | :---: | :---: | :--- |
-| **Python** | 3/5 | 🟨 | [[knowledge/testing]] |
+| **Python** | 3/5 | 🟨 | [[testing]] |
 | **Git & GitHub** | 4/5 | 🟩 | - |
-| **FastAPI** | 2/5 | 🟥 | [[knowledge/auth]] |
-| **SQL & PostgreSQL** | 2/5 | 🟥 | [[knowledge/sql]] |
-| **Docker & Compose** | 2/5 | 🟥 | [[knowledge/docker]] |
-| **Testing (pytest)** | 1/5 | 🟥 | [[knowledge/testing]] |
-| **JWT & RBAC** | 1/5 | 🟥 | [[knowledge/auth]] |
+| **FastAPI** | 2/5 | 🟥 | [[auth]] |
+| **SQL & PostgreSQL** | 2/5 | 🟥 | [[sql]] |
+| **Docker & Compose** | 2/5 | 🟥 | [[docker]] |
+| **Testing (pytest)** | 1/5 | 🟥 | [[testing]] |
+| **JWT & RBAC** | 1/5 | 🟥 | [[auth]] |
 
 *Status Legend:*
 - 🟥 Not Ready (Cannot explain under interview pressure)

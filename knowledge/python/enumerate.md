@@ -4,8 +4,6 @@ If you spend enough time writing Python, you will eventually find yourself needi
 
 Imagine you are building a simple command-line application and you want to print a numbered menu of options:
 
-Python
-
 ```python
 fruits = ["apple", "banana", "orange"]
 ```
@@ -118,8 +116,6 @@ If the answer is yes, `enumerate` is usually the right choice. Here are a few co
 
 Displaying human-readable lists to users.
 
-
-
 ```Python
 for number, option in enumerate(menu, start=1):
     print(f"Press {number} for {option}")
@@ -128,7 +124,6 @@ for number, option in enumerate(menu, start=1):
 **2. Finding an Item's Exact Location**
 
 Searching for a specific element and returning its index.
-
 
 ```Python
 for index, user in enumerate(users):
@@ -139,8 +134,6 @@ for index, user in enumerate(users):
 **3. Updating a List in Place**
 
 When you need to modify the original list based on the items currently inside it.
-
-
 
 ```Python
 for i, value in enumerate(numbers):
@@ -161,8 +154,6 @@ Imagine someone walking beside your list carrying a mechanical tally clicker. Ev
     
 3. You receive both together.
     
-
-
 
 ```Plaintext
 apple     ← the item

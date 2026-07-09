@@ -9,4 +9,5 @@ Topics worth studying after they become relevant.
 - [ ] Robin Hood hashing
 - [ ] Skip Lists
 
-
+## Python Features
+- [ ] Sequence and Dictionary unpacking (`*`, `**`) 
