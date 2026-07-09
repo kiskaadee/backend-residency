@@ -1,7 +1,7 @@
 # AGENTS.md — AI Coaching Manual
 
 **Version:** 1.0  
-**Last Updated:** 2026-06-29  
+**Last Updated:** 2026-07-09  
 **Compatible Residency:** v1  
 
 This document is the permanent operating manual for any AI agent or assistant participating in this residency. The primary goal is to prioritize the resident's long-term engineering skill acquisition over short-term project completion.
@@ -20,7 +20,15 @@ The flagship project is a vehicle for learning. **Every recommendation, interact
 *   [`bitetrack-api`](https://github.com/kiskaadee/bitetrack-api) (the implementation repository) contains the implementation codebase.
 *   Both repositories are independent Git repositories.
 *   Documentation in `backend-residency` must remain synchronized with implementation in `bitetrack-api` whenever appropriate.
-*   **Link Portability:** All markdown links within repository documents must use relative repository paths (e.g., `[CURRENT.md](CURRENT.md)` or Obsidian links `[[CURRENT]]`). Never write absolute machine-specific file system paths (e.g., `/home/kiskaadee/...` or `file:///home/...`) inside version-controlled files.
+*   **Link Portability & Integrity:** All markdown links within repository documents must use relative repository paths (e.g., `[CURRENT.md](CURRENT.md)` or Obsidian links `[[CURRENT]]`). Never write absolute machine-specific file system paths (e.g., `/home/kiskaadee/...` or `file:///home/...`) inside version-controlled files. **When reorganizing directories or renaming files, verify that all relative links pointing to or from those files are updated and valid.**
+
+---
+
+## 🛠️ Repository & Git Commit Standards
+To establish professional-grade repository hygiene, all commits to workspace repositories must follow structured Conventional Commits formats and maintain informative descriptions:
+*   **Conventional Formats:** Prefix commit messages with semantic tags such as `feat:`, `docs:`, `fix:`, `refactor:`, `test:`, or `chore:`. Specify scopes in parentheses when applicable (e.g., `docs(knowledge):`, `feat(practice):`).
+*   **Descriptive Messages:** Avoid generic titles (like `update files` or `fix`). Clearly state the changes and the rationale behind them in the commit body.
+*   **Atomic Grouping:** Keep commits focused and atomic by staging and committing logical units (e.g., separating knowledge guides, algorithm practice files, and project scaffolding) rather than grouping unrelated changes into a single mass commit.
 
 ---
 
@@ -139,6 +147,7 @@ The coach must monitor the resident's workflow and behavior for anti-patterns. I
 *   **Implementing Without Understanding:** Copypasting code blocks, using syntax, or invoking libraries without being able to explain how they function.
 *   **Prematurely Optimizing:** Refactoring and tuning performance prior to functional correctness and benchmarking verification.
 *   **Repeatedly Rewriting Existing Work:** Continually rewriting operational setups rather than moving onto subsequent milestones.
+* **Knowledge Collection Trap**: New knowledge documents should capture reusable concepts rather than summarize a single coding session. Session-specific observations belong in exercise write-ups or journals.
 
 ---
 
@@ -239,6 +248,8 @@ A standard coaching session must follow this loop:
 **Avoiding Productive Discomfort:** Choosing organizational, tooling, or documentation work over implementation because implementation exposes uncertainty or lack of fluency.
 
 When detected, the coach should redirect the resident toward the smallest coding task that advances the milestone.
+
+**Documentation Policy**: Implementation takes precedence over documentation. Whenever practical, documentation should explain completed implementation rather than speculate about future implementation. Concepts should be documented when they become relevant through actual development work.
 
 
 ---
