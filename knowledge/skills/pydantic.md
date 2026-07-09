@@ -1,10 +1,6 @@
 # Introduction to Pydantic
-Notes during my Pydantic documentation review; 
+
 ## Why does Pydantic exist?
-
-↓
-
-## What problem does it solve?
 
 ↓
 
@@ -12,28 +8,14 @@ Notes during my Pydantic documentation review;
 
 ↓
 
-## How does validation work?
+## Automatic validation
 
 ↓
 
-## How does FastAPI use Pydantic?
+## Creating my first model
 
 ↓
 
-## Input models vs output models
+## How FastAPI uses BaseModel
 
 ↓
-
-## Field validation
-
-↓
-
-## Custom validators
-
-↓
-
-## Serialization
-
-↓
-
-## Configuration
