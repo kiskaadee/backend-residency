@@ -4,17 +4,16 @@ If you spend enough time writing Python, you will eventually find yourself needi
 Imagine you are processing user data and have two separate lists—one for names and one for test scores: 
 
 ```python
-names = ["Luisa", "Nathalia", "Daniela", "Elizabeth", "Camila", "Jennifer"]
-scores = [90, 72, 92, 82, 84, 40]
+names = ["Ana", "Daniela", "Luisa"]
+scores = [90, 72, 92]
 ```
 
 You want the output to match them up logically:
 
 ```text
-Luisa scored 90
-Nathalia scored 72
-Daniela scored 92
-...
+Ana scored 90
+Daniela scored 72
+Luisa scored 92
 ```
 
 Naturally, the first question is: *"How do I pull items from both lists simultaneously?"*

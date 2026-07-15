@@ -131,6 +131,8 @@ for index, user in enumerate(users):
         print(f"User found at row {index}")
 ```
 
+However, for this specific example, it might be more convenient to use the [`index()`](https://www.geeksforgeeks.org/python/python-list-index/) method.
+
 **3. Updating a List in Place**
 
 When you need to modify the original list based on the items currently inside it.

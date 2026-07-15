@@ -11,3 +11,7 @@ Topics worth studying after they become relevant.
 
 ## Python Features
 - [ ] Sequence and Dictionary unpacking (`*`, `**`) 
+
+## FastAPI
+- [ ] SQLModel
+- [ ] 
