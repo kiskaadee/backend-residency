@@ -1,7 +1,6 @@
-# Flagship Project Architecture
+# BiteTrack Backend v2 Architecture 
 
-## Name: BiteTrack Backend v2
-A production-grade reboot of the BiteTrack system focusing on inventory, order management, and core transactional processes using FastAPI.
+BiteTrack follows a layered architecture that separates HTTP concerns, data validation, business rules, and persistence.
 
 ## Core Architectural Layout
 The system follows a layered architecture to decouple routing, validation, business rules, and database access.
@@ -15,8 +14,43 @@ graph TD
     DB -->|Read/Write| Postgres[(PostgreSQL Database)]
 ```
 
-## Layers:
-1. **Routers (`routers/`)**: Handles HTTP routing, status codes, and security dependency injections.
-2. **Schemas (`schemas/`)**: JSON serialization, deserialization, and strict input/output verification.
-3. **Services (`services/`)**: Orchestrates business actions, processes transactions, and wraps DB actions.
-4. **Models (`models/`)**: Represents relational tables mapped to PostgreSQL.
+## Layers
+
+### Routers (`routers/`)
+
+Responsible for:
+
+- HTTP routing
+- Status codes
+- Dependency injection
+- Authentication
+
+---
+
+### Schemas (`schemas/`)
+
+Responsible for:
+
+- Request validation
+- Response serialization
+- API contracts
+
+---
+
+### Services (`services/`)
+
+Responsible for:
+
+- Business rules 
+- Workflow orchestration 
+- Database transactions 
+- Coordination between repositories and domain models
+
+---
+
+### Models (`models/`)
+
+Responsible for:
+
+- Relational database mapping
+- Persistence

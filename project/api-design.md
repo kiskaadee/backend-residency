@@ -1,33 +1,78 @@
 # BiteTrack API Design
 
-## Endpoints Specification
+## Endpoint Specification
 
-### Authentication
-- `POST /auth/register` - Create user.
-- `POST /auth/token` - Authenticate user & issue JWT Access & Refresh Tokens.
-- `POST /auth/refresh` - Rotate access tokens using HttpOnly Refresh Cookie.
+---
 
-### Users & Profiles
-- `GET /users/me` - Fetch own profile.
-- `PATCH /users/me` - Update own profile.
-- `GET /users` - List all users (Admin only).
+## Authentication
 
-### Categories
+- `POST /auth/register` - Register a new user.
+- `POST /auth/token` - Authenticate a user and issue access & refresh tokens.
+- `POST /auth/refresh` - Rotate an access token using a refresh token.
+
+---
+
+## Users
+
+- `GET /users/me` - Retrieve the authenticated user's profile.
+- `PATCH /users/me` - Update the authenticated user's profile.
+- `GET /users` - List users (Administrator only).
+- `POST /users` - Create a new staff or administrator account (Administrator only).
+
+---
+
+## Customers
+
+- `POST /customers` - Create customer.
+- `GET /customers` - List customers.
+- `GET /customers/{id}` - Retrieve customer information.
+- `PATCH /customers/{id}` - Update customer information.
+- `DELETE /customers/{id}` - Archive customer.
+- `GET /customers/{id}/balance` - Retrieve current outstanding balance.
+
+---
+
+## Categories
+
 - `POST /categories` - Create category.
-- `GET /categories` - List categories (with pagination).
-- `GET /categories/{id}` - Retrieve category detail.
+- `GET /categories` - List categories.
+- `GET /categories/{id}` - Retrieve category details.
 - `PUT /categories/{id}` - Update category.
 - `DELETE /categories/{id}` - Delete category.
 
-### Products
+---
+
+## Products
+
 - `POST /products` - Create product.
-- `GET /products` - List products (with text search, category filters, and pagination).
+- `GET /products` - List products.
 - `GET /products/{id}` - Retrieve product details.
-- `PUT /products/{id}` - Update product attributes.
+- `PUT /products/{id}` - Update product.
 - `DELETE /products/{id}` - Delete product.
 
-### Orders
-- `POST /orders` - Place order (adjusts stock level inside database transaction).
-- `GET /orders` - List orders.
-- `GET /orders/{id}` - Retrieve order details.
-- `PATCH /orders/{id}/status` - Cancel or process order (Admin/Worker only).
+---
+
+## Sales
+
+- `POST /sales` - Register a sale and update inventory.
+- `GET /sales` - List sales.
+- `GET /sales/{id}` - Retrieve sale details.
+- `POST /sales/{id}/payments` - Register a payment for an existing sale.
+- `GET /sales/{id}/payments` - List payments associated with a sale.
+
+---
+
+## Inventory
+
+- `POST /inventory/losses` - Register inventory loss.
+- `GET /inventory/losses` - List inventory losses.
+
+---
+
+## Reports
+
+- `GET /reports/sales`
+- `GET /reports/customer-balances`
+- `GET /reports/inventory`
+- `GET /reports/product-performance`
+- `GET /reports/waste`

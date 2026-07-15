@@ -3,8 +3,8 @@
 This is the operational TODO list for your flagship backend project.
 
 ## Currently Doing
-- [ ] Initialize repository with `uv`
-- [ ] Set up Docker Compose for local development (PostgreSQL & FastAPI)
+- [x] Initialize repository with `uv`
+- [x] Set up Docker Compose for local development (PostgreSQL & FastAPI)
 
 ## To Do (Backlog)
 - [ ] Implement Users CRUD
