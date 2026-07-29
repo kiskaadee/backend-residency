@@ -128,17 +128,19 @@ This `ListNode` is the building block of your linked list, it's the minimal impl
 While learning the data structure, it is useful to enrich the class with debugging helpers. These additions are not part of the data structure itself; they simply make it easier to visualize the chain of nodes in memory.
 
 ```python
+from typing import Any
 class ListNode:
-    def __init__(self, val: any = 0, next: 'ListNode | None' = None):
+    def __init__(self, val: Any = 0, next: 'ListNode | None' = None):
         if next is not None and not isinstance(next, ListNode):
             raise TypeError("`next` must be a ListNode or None.")
             
         self.val = val
         self.next = next
         
-    def __repr__(self):
+    def __repr__(self) -> str:
         next_id = hex(id(self.next)) if self.next else None
-        return f"ListNode(id={hex(id(self))}, val='{self.val}', next={next_id})"
+        return f"ListNode(id={hex(id(self))}, val={self.val}: {type(self.val)}, next={next_id})"
+
     
     def inspect(self):
         current = self
