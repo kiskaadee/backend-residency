@@ -42,7 +42,7 @@ Return _the head of the merged linked list_.
 Both lists are already sorted in non-decreasing order.
 The key constraint is not to copy values in memory but to reuse the existing nodes from the input lists. That means we need to sequentially rewire each node up to the next sorted position. 
 
-Our strategy will be compare the values at each firsts node, and assign the smallest to a dummy node. The dummy node simplifies handling the tail. As long as both lists have nodes left, we check which lists' value is the smaller. Once one of the lists has been exhausted, the unappended values from the other lists are appended and the resulting lists is returned.
+The strategy is to repeatedly compare the front node of each list and attach the smaller one to the tail of the merged list. A dummy node provides a stable starting point so every insertion follows the same logic, including the first one.
 
 
 ```mermaid
@@ -104,11 +104,50 @@ class ListNode:
             current = current.next
         
 
-class Solution: 
+class Solution:
     def mergeTwoLists(self, list1: Optional[ListNode], list2: Optional[ListNode]) -> Optional[ListNode]:
-        result = ListNode()
-        return result.next
+        dummy = ListNode()
+        current = dummy
 
-
+        while list1 and list2:
+            if list1.val <= list2.val:
+                current.next = list1
+                list1 = list1.next
+            else:
+                current.next = list2
+                list2 = list2.next
+            current = current.next
+        current.next = list1 or list2
+        return dummy.next
 
 ```
+
+## Complexity
+
+- **Time:** $O(n + m)$
+
+  Each node from both lists is visited exactly once.
+
+- **Space:** $O(1)$
+
+  The algorithm only uses a few pointers (`dummy`, `current`, `list1`, `list2`).
+  No new list is allocated—the existing nodes are reused.
+
+## Key Takeaways
+- A dummy node removes the special case for inserting the first element
+- The `current` pointer always represents the tail of the merged list.
+- Moving a pointer (`list1 = list1.next`) does **not** modify the list; it only changes where our local reference points.
+- Reassigning `current.next` rewires the linked structure without creating new nodes
+- Once one list is exhausted, the remaining nodes of the other list are already sorted and can be appended directly.
+- Advancing a pointer never changes the underlying linked list—it only changes which node your variable refers to.
+
+## Common Mistakes
+
+- Creating new nodes instead of reusing existing ones.
+- Comparing `ListNode` objects instead of their values.
+- Forgetting to advance `current`.
+- Forgetting to advance the list whose node was consumed.
+- Returning `dummy` instead of `dummy.next`.
+- Forgetting to append the remaining nodes after one list is exhausted.
+
+
