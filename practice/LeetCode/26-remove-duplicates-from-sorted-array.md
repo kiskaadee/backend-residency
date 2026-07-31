@@ -81,7 +81,7 @@ i:          ^
 w:          ^
 ```
 
-The first digit is never a duplicate so we copy this value in place and move both of our pointers. Notice that we're overriding the actual value from `nums[0]`, although the new value is equal to the original.
+The first element is never considered a duplicate because there is no previous value to compare against, so we copy this value in place and move both of our pointers (or simply start iterating from the next index). Notice that we're overriding the actual value from `nums[0]`, even though the new value is equal to the original.
 
 ```Plaintext
 # Iteration 2
@@ -124,7 +124,7 @@ nums = [1, 2, 3, 4, 4]
 w = 4
 ```
 
-Being `w = 4` immediately after our last unique value, we can safely discard the values after `nums[w]`.
+At the end of the scan, `w` equals the number of unique elements. The first `w` positions already contain the required result. Since the problem explicitly states that every element after index `w - 1` can be ignored, no additional cleanup is necessary. We simply return `w`.
 
 ## Algorithm 
 
@@ -136,48 +136,49 @@ graph TD
     input[/"Input: 
     **nums**: List[int]"/]
 
-    init[Initialize read and write pointers]
+    init[Initialize *Read* and *Write* pointers]
 
-    scan{Read pointer<br/>at end?}
+    scan{*Read* pointer<br/>at end?}
 
     unique{Current value<br/>different from previous?}
 
-    copy[Copy value to write position]
+    copy[Copy value to *Write* position]
 
-    moveRead[Advance read]
+    moveRead[Advance *Read*]
 
-    moveBoth[Advance read<br/>and write]
-	
-	trim[trim values from write pointer]
+    moveBoth[Advance *Read*<br/>and *Write*]
     
-    END([Return nums])
+    END([Return Write])
 
     START --> input --> init --> scan
     scan -- No --> unique
     unique -- Yes --> copy --> moveBoth --> scan
     unique -- No --> moveRead --> scan
-    scan -- Yes --> trim --> END
+    scan -- Yes --> END
 ```
 
 
 ## Implementation
 
-A Python for loop saves us from manually managing the Read pointer. From there the implementation is fairly simple
+Since the read pointer advances sequentially through the array, a `for` loop naturally manages it. The write pointer is the only index we update manually.
 
 ```python
 from typing import List
 
 
 class Solution:
-	def removeDuplicates(self, nums: List[int]) -> List[int]:
+	def removeDuplicates(self, nums: List[int]) -> int:
 		if not nums:
-			return []
+		    return 0
+		
 		w = 1
+
 		for i in range(1, len(nums)):
-			if nums[i] != nums[i -1]:
-				nums[w] = nums[i]
-				w+=1
-		return nums[:w]
+		    if nums[i] != nums[i - 1]:
+		        nums[w] = nums[i]
+		        w += 1
+		
+		return w
 
 ```
 
@@ -188,4 +189,5 @@ class Solution:
     
 - **In-Place Transformation via Two Pointers:** When memory constraints prohibit auxiliary data structures or copies, a read-write pointer pattern allows linear $O(n)$ time and $O(1)$ space restructuring by partitioning the array into processed (unique) and unprocessed regions.
     
-- **Interface vs. Implementation Constraints:** Standard platform signatures often specify returning an integer length to validate in-place modifications without allocating a new slice. However, returning a sliced view (`nums[:w]`) satisfies functional requirements when API contracts demand returning the modified collection directly.
+- **Interface vs. Implementation Constraints:** Solving the algorithm is only part of the task. Competitive programming platforms often define a precise interface that the implementation must satisfy. In this problem, the array is modified in place, while the function returns only the number of valid elements (`k`).
+- **The specification is part of the problem.** Verify what must be returned before reasoning about implementation details.
