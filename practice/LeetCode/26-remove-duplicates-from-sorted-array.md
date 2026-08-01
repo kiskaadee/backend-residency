@@ -183,6 +183,12 @@ class Solution:
 ```
 
 
+### Complexity Analysis
+
+- **Time Complexity:** $O(n)$, where $n$ is the number of elements in the array `nums`. The algorithm scans the array exactly once using a single `for` loop. Each comparison and assignment operation runs in constant time $O(1)$.
+    
+- **Space Complexity:** $O(1)$. The operation modifies the array in place using a fixed number of scalar pointers (`w` and the loop variable `i`), requiring no auxiliary data structures or memory scaling with input size.
+
 ## Takeaways
 
 - **Mutation and Iteration Hazards:** Mutating a collection (via `pop()` or `remove()`) while iterating over its index or iterator shifts subsequent elements unpredictably. This invalidates remaining loop bounds or skips elements unless working on a copy.
