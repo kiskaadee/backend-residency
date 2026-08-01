@@ -93,7 +93,7 @@ graph TD
     keep -- Yes --> copy --> moveBoth --> scan
     keep -- No --> moveRead --> scan
     scan -- Yes --> END
-````
+```
 
 ## Implementation
 
