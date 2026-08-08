@@ -4,3 +4,4 @@
 .venv/
 .obsidian/graph.json
 .direnv/
+.local_config.json

@@ -21,6 +21,7 @@ The flagship project is a vehicle for learning. **Every recommendation, interact
 *   Both repositories are independent Git repositories.
 *   Documentation in `backend-residency` must remain synchronized with implementation in `bitetrack-api` whenever appropriate.
 *   **Link Portability & Integrity:** All markdown links within repository documents must use relative repository paths (e.g., `[CURRENT.md](CURRENT.md)` or Obsidian links `[[CURRENT]]`). Never write absolute machine-specific file system paths (e.g., `/home/kiskaadee/...` or `file:///home/...`) inside version-controlled files. **When reorganizing directories or renaming files, verify that all relative links pointing to or from those files are updated and valid.**
+*   **Local Configuration:** Since the repositories reside in separate directories, the absolute path to `bitetrack-api` must NOT be hardcoded in version-controlled files. Instead, agents must look for a machine-local, git-ignored `.local_config.json` at the root of `backend-residency` containing `{"bitetrack_api_path": "/path/to/bitetrack-api"}` to determine the implementation codebase path.
 
 ---
 
