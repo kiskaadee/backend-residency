@@ -2,7 +2,10 @@
 
 Topics worth studying after they become relevant.
 
-## Data Structures
+## Algorithms
+- [ ] Tail Call Optimization 
+
+- ## Data Structures
 
 - [ ] HashMap collision resolution
 - [ ] Open addressing
