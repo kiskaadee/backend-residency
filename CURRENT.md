@@ -7,13 +7,13 @@ Implement Secure User Registration & CRUD (Milestone 1).
 None.
 
 ## Next Action !!!!
-Build one endpoint that accepts a validated request body (`POST /auth/register`).
+Implement `UserRegister` and `UserResponse` schemas and the registration endpoint with validation.
 
-Tactical actions for next session:
-1. Complete the narrow, focused Pydantic guide skeleton in `knowledge/skills/pydantic.md`.
-2. Design the `UserRegister` and `UserResponse` Pydantic models.
-3. Implement `POST /auth/register` in `bitetrack-api` routes returning a dummy response.
-4. Verify route validation and responses.
+Tactical actions for today's session:
+1. Design `UserRegister` and `UserResponse` Pydantic models in `src/schemas/users.py` (inheriting/extending `UserBase`).
+2. Implement `POST /auth/register` in `src/routers/auth.py` to return a dummy response conforming to `UserResponse`.
+3. Manually verify the endpoint's automatic type validation and `422 Unprocessable Entity` responses.
+4. Draft basic validation tests in the `/tests` folder using `fastapi.testclient.TestClient`.
 ---
 
 ### Step 1 — Read only what you need (30–60 min) -- 
