@@ -210,7 +210,7 @@ flowchart TD
 ```
 **Implementation**: 
 
-I have a [guide](../../knowledge/python/zip) on `zip()`'s behavior and use cases, but, in a nutshell, this function combines multiple lists or iterables (like tuples or strings) element-by-element, pairing items at the same index together into tuples. 
+I have a [guide](../../knowledge/python/zip.md) on `zip()`'s behavior and use cases, but, in a nutshell, this function combines multiple lists or iterables (like tuples or strings) element-by-element, pairing items at the same index together into tuples. 
 
 Consider the following list of strings:
 

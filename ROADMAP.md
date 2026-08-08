@@ -8,7 +8,7 @@ This document outlines the milestones and gates of the Backend Residency. Instea
 Rebuild the original BiteTrack backend using modern Python technologies and production-grade engineering practices.
 - **Mission:** Rebuild BiteTrack from the ground up focusing on professional backend engineering. The goal is not feature parity with legacy version, but demonstrating clean code, tests, and API standards.
 - **Key Modules:** Auth & RBAC, Products & Categories, Orders & Transaction safety, Search & Filtering, and logging.
-- **Reference Docs:** [[project/README]], [[project/architecture]], [[project/api-design]], [[project/database]].
+- **Reference Docs:** [project/README](https://github.com/kiskaadee/bitetrack-api/blob/main/README.md), [project/architecture](https://github.com/kiskaadee/bitetrack-api/blob/main/docs/architecture.md), [project/api-design](https://github.com/kiskaadee/bitetrack-api/blob/main/docs/api-design.md), [project/database](https://github.com/kiskaadee/bitetrack-api/blob/main/docs/database.md).
 
 ---
 
@@ -22,6 +22,11 @@ Rebuild the original BiteTrack backend using modern Python technologies and prod
   - Initialize Python environment using `uv`
   - Configure Ruff, Pyright, and code formatter
   - Setup multi-container Docker Compose file (`FastAPI` & `PostgreSQL`)
+- **Relevant ADRs:**
+  - [ADR 0001: Language Choice (Python)](docs/adr/0001-python.md)
+  - [ADR 0002: Framework Choice (FastAPI)](docs/adr/0002-fastapi.md)
+  - [ADR 0003: Database Choice (PostgreSQL)](docs/adr/0003-postgresql.md)
+  - [ADR 0004: Project Structure](docs/adr/0004-project-structure.md)
 - **Acceptance Tests:**
   - [x] Running `docker compose up` starts the PostgreSQL database container.
   - [x] Running `curl http://localhost:8000/docs` yields a valid HTML response (FastAPI running in local devShell).

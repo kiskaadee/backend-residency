@@ -4,6 +4,8 @@ Status: Solved
 
 Difficulty: Easy
 
+**Relevant Guides:** [Linked List Guide](../../knowledge/dsa/linked-list.md)
+
 ## Problem Statement 
 
 You are given the heads of two sorted linked lists `list1` and `list2`.
