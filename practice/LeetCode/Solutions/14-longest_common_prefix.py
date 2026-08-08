@@ -51,7 +51,7 @@ class Solution:
         right = min(len(string) for string in strs)
         answer = ""
         while left <= right:
-            mid = (left + right) // 2
+            mid = left + (right - left) // 2
             if is_common_prefix(strs, mid):
                 answer = strs[0][:mid]
                 left = mid + 1

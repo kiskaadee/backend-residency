@@ -262,7 +262,7 @@ class Solution:
         return "".join(prefix)        
 ```
 
-### Binary Search
+### [Binary Search](../../knowledge/dsa/binary-search.md)
 This is a classic Divide and Conquer approach. Rather than searching over the strings themselves, we search over the **possible prefix lengths**. The search space ranges from `0` to the length of the shortest string. For a candidate length `k`, we ask whether the first `k` characters are shared by every string.
 
 **Algorithm**:
@@ -326,7 +326,7 @@ class Solution:
         answer = ""
 
         while left <= right:
-            mid = (left + right) // 2
+            mid = left + (right - left) // 2
             if is_common_prefix(strs, mid):
                 answer = strs[0][:mid]
                 left = mid + 1
@@ -368,12 +368,9 @@ Using `S` isn't wrong if you define it carefully, but I think `n` and `m` make i
 - **Why it works:** `zip(*strs)` creates an iterator of tuples representing "columns." `set()` provides an $O(1)$ way to verify if all items in a column are identical.
     
 - **Trade-off:** `zip` will stop at the length of the shortest string automatically, which handles the bounds check elegantly. However, `list(zip(...))` creates an intermediate data structure in memory.
-    
-
 ### 4. Binary Search
 
 - **Why it works:** We treat the prefix length as the search space $[0, M]$.
-    
 - **Trade-off:** Primarily valuable as an application of binary search over the solution space rather than for practical performance on typical inputs. This is overkill for most interview cases. Use it only when strings are exceptionally long, as it minimizes the number of character comparisons.
 ## Takeaways
 
