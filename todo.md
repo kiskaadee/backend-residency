@@ -34,25 +34,25 @@
 ---
 
 ## Milestone 1: Secure User Registration & CRUD
-- **Status:** 🟥 Not Started
+- **Status:** 🟡 In Progress
 - **Estimated Effort:** 15-20 hours
 
 ### Research
-- [ ] Read FastAPI official guides on Routing, Dependency Injection, and Pydantic models.
-- [ ] Read HTTP status codes guidelines.
+- [x] Read FastAPI official guides on Routing, Dependency Injection, and Pydantic models.
+- [x] Read HTTP status codes guidelines.
 
 ### Implement
-- [ ] `POST /auth/register` (user registration route)
+- [x] `POST /auth/register` (user registration route - dummy validation skeleton)
 - [ ] `GET /users/me` (get profile route)
 - [ ] `PATCH /users/me` (update profile route)
 
 ### Verify
-- [ ] Execute curls with incorrect payloads to confirm validation triggers.
-- [ ] Verify validation responses return clear field errors.
+- [x] Execute curls with incorrect payloads to confirm validation triggers.
+- [x] Verify validation responses return clear field errors.
 
 ### Acceptance Tests
 - [ ] Register new user, query their profile, and match the return payload fields.
-- [ ] Registering with invalid email payload returns HTTP `422`.
+- [x] Registering with invalid email payload returns HTTP `422`.
 
 ### Interview Checkpoint
 - [ ] Explain the request-response lifecycle.
