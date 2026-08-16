@@ -2,7 +2,7 @@
 
 Reference: [HashMaps in Python Tutorial - Data Structures for Coding Interviews](https://www.youtube.com/watch?v=RcZsTI5h0kg)
 
-A HashMap is ==a data structure that stores items in key-value pairs==. Instead of using numeric indices (like an array), you use a their unique identifier (the key) to quickly retrieve, insert, or delete its associated value with an average time complexity of $O(1)$.
+A HashMap is a data structure that stores items in **key-value pairs**. Instead of using numeric indices (like an array), you use their unique identifier (the key) to quickly retrieve, insert, or delete its associated value with an average time complexity of $O(1)$.
 
 Imagine your phone contacts. Instead of remembering that Alice is stored at position 237, you simply ask for `"Alice"` and immediately retrieve her phone number. The contact name is the **key**; the phone number is the **value**.
 ## Why use a HashMap?
