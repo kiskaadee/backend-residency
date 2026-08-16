@@ -181,7 +181,6 @@ During reviews, inspect the following files for potential documentation drift:
 *   Architecture diagrams and design documents in the `docs/` folder
 *   Architecture Decision Records (ADRs)
 *   Knowledge notes in `knowledge/`
-*   Journal logs in `journal/`
 
 If the implementation diverged from documentation, identify and resolve the drift immediately.
 

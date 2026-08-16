@@ -7,7 +7,6 @@ Welcome to your Backend Residency. This repository is configured to organize you
 ### Strategic Documents
 - [todo.md](todo.md) — The main checklist representing the core phases, tasks, and exit criteria. (Symlinked to your home directory at `~/todo.md` for quick access!)
 - [ROADMAP.md](ROADMAP.md) — The high-level strategic roadmap with phase details and exit gates.
-- [WEEKLY.md](WEEKLY.md) — Index of daily journals and weekly planning.
 - [SKILLS.md](SKILLS.md) — Confidence and interview readiness matrix for core backend technologies.
 - [AGENTS.md](AGENTS.md) — The AI Coaching Manual and guidelines for the residency.
 - [parking-lot.md](knowledge/parking-lot.md) — Backlog of future topics and concepts deferred to prevent scope creep.
