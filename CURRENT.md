@@ -7,13 +7,13 @@ Implement Secure User Registration & CRUD (Milestone 1).
 None.
 
 ## Next Action !!!!
-Implement `UserRegister` and `UserResponse` schemas and the registration endpoint with validation.
+Implement profile retrieval (`GET /users/me`) and partial update (`PATCH /users/me`) endpoints.
 
 Tactical actions for today's session:
-1. Design `UserRegister` and `UserResponse` Pydantic models in `src/schemas/users.py` (inheriting/extending `UserBase`).
-2. Implement `POST /auth/register` in `src/routers/auth.py` to return a dummy response conforming to `UserResponse`.
-3. Manually verify the endpoint's automatic type validation and `422 Unprocessable Entity` responses.
-4. Draft basic validation tests in the `/tests` folder using `fastapi.testclient.TestClient`.
+1. Design the `UserUpdate` Pydantic schema in [src/schemas/users.py](https://github.com/kiskaadee/bitetrack-api/blob/main/src/schemas/users.py) (ensuring all fields are optional to support partial `PATCH` updates).
+2. Implement the `GET /users/me` endpoint in [src/routers/users.py](https://github.com/kiskaadee/bitetrack-api/blob/main/src/routers/users.py) to return a dummy user profile matching `UserResponse`.
+3. Implement the `PATCH /users/me` endpoint in [src/routers/users.py](https://github.com/kiskaadee/bitetrack-api/blob/main/src/routers/users.py) accepting the `UserUpdate` model and returning a merged dummy `UserResponse`.
+4. Add automated tests in [tests/test_users.py](https://github.com/kiskaadee/bitetrack-api/blob/main/tests/test_users.py) (or `tests/test_auth.py`) to verify validation and responses.
 ---
 
 ### Step 1 — Read only what you need (30–60 min) -- 
